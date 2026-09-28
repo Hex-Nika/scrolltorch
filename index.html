@@ -97,9 +97,9 @@
                 <button class="btn" onclick="generateCode()">Get Verification Code</button>
             </div>
             <div id="step-2" class="verify-step">
-                <p>Post this code on project <b>48173</b>:</p>
+                <p>Post this code on project <b>236365</b>:</p>
                 <div class="code-box" id="display-code">------</div>
-                <a href="https://codetorch.net/projects/48173" target="_blank" style="color: #4a90e2; font-size: 14px; text-decoration: none;">Open Comments</a>
+                <a href="https://codetorch.net/projects/236365" target="_blank" style="color: #4a90e2; font-size: 14px; text-decoration: none;">Open Comments</a>
                 <button class="btn" id="verify-btn" style="margin-top: 20px;" onclick="verifyComment()">Verify Me</button>
                 <p id="auth-error" style="color: #ff4d4d; font-size: 13px; margin-top: 10px;"></p>
             </div>
@@ -172,7 +172,7 @@
             const btn = document.getElementById('verify-btn');
             btn.disabled = true; btn.innerText = "Checking...";
             try {
-                const response = await fetch(`https://api.codetorch.net/v1/comments/projects/48173?limit=15&offset=0`);
+                const response = await fetch(`https://api.codetorch.net/v1/comments/projects/236365?limit=15&offset=0`);
                 const comments = await response.json();
                 const isVerified = comments.some(c => c.userSent.toLowerCase() === CURRENT_USER.toLowerCase() && c.message.includes(AUTH_CODE));
                 if (isVerified) {
